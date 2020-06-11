@@ -28,6 +28,7 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'Admin', 'mi
 	Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 	Route::resource('client', 'ClientController');
 	Route::resource('pages', 'PagesController');
+	Route::resource('banner', 'HomeBannerController');
 });
 
 Route::group(['as' => 'author.', 'prefix' => 'author', 'namespace' => 'Author', 'middleware' => ['auth', 'author']], function(){
